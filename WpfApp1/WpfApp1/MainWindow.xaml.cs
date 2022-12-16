@@ -166,7 +166,7 @@ class krug : Figure
         prym[] pryms = new prym[3];
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int i = 0, j = 0, k = 0, kk = 1;
+            int i = 0, j = 0, k = 0;
             string aa = "";
             string pp = "";
             if (rb1.IsChecked == true)
@@ -184,7 +184,6 @@ class krug : Figure
                     i++;
                    
                     lb.Items.Add( "Круг с радиусом " + r.ToString() + " периметром: " + pp.ToString() + " площадью: " + aa.ToString());
-                    kk++;
                 }
             }
             if (rb2.IsChecked == true)
@@ -195,7 +194,12 @@ class krug : Figure
                 traps[j] = new trap(a,b,c);
                     tb3.Text = String.Format("{0}", traps[j].Perimeter());
                     tb4.Text = String.Format("{0}", traps[j].Area());
+                pp = tb3.Text;
+                aa = tb4.Text;
                 j++;
+
+                lb.Items.Add("Треугольник с параметрами: " + a.ToString() + " " + b.ToString() + " " + c.ToString() + " периметр: " + pp + " площадью: " + aa);
+
             }
             if (rb3.IsChecked == true)
             {
@@ -206,7 +210,11 @@ class krug : Figure
                     pryms[k] = new prym(a,b);
                     tb3.Text = String.Format("{0}", pryms[k].Perimeter());
                     tb4.Text = String.Format("{0}", pryms[k].Area());
+                    pp = tb3.Text;
+                    aa = tb4.Text;
                     k++;
+
+                    lb.Items.Add("Прямоугольник с параметрами " + a.ToString() + " " + b.ToString() + " периметр: " + pp + " площадью: " + aa);
                 }
             }
             tb1.Visibility = Visibility.Collapsed;
@@ -220,6 +228,14 @@ class krug : Figure
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (lb.SelectedIndex != -1)
+                lb.Items.RemoveAt(lb.SelectedIndex);
+            else
+                MessageBox.Show("Ошибка удаления. Выберите что-то.");
         }
     }
 }

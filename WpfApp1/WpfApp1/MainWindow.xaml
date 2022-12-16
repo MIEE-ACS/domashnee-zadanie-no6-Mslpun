@@ -19,7 +19,8 @@
         <TextBox x:Name="tb4" HorizontalAlignment="Left" Margin="521,240,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tbb3" HorizontalAlignment="Left" Margin="252,263,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,0.615" Visibility ="Collapsed"/>
         <TextBlock x:Name="tbbb3" HorizontalAlignment="Left" Margin="198,265,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility ="Collapsed"/>
-        <ListBox x:Name="lb" d:ItemsSource="{d:SampleData ItemCount=6}" Margin="0,156,580,116"/>
+        <ListBox x:Name="lb" d:ItemsSource="{d:SampleData ItemCount=6}" Margin="180,323,159,10"/>
+        <Button Content="Удалить элемент" HorizontalAlignment="Left" Margin="62,323,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
