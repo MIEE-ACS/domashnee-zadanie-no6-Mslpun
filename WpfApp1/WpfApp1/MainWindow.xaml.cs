@@ -32,19 +32,19 @@ class krug : Figure
        public double r;
     public double radik{ get { return r; } set { r = value; } }
 
-        public krug(double rad)
+    public krug(double rad)
     {
          r = rad;
     }
     public override double Perimeter()
     {
-            double h = (2 * 3.14 * r);
+        double h = (2 * 3.14 * r);
         return h;
     }
 
     public override double Area()
     {
-            return (3.14 * r * r);
+        return (3.14 * r * r);
     }
 }
     class trap : Figure
@@ -183,7 +183,7 @@ class krug : Figure
                     aa = tb4.Text;
                     i++;
                    
-                    lb.Items.Add( "Круг с радиусом " + r.ToString() + " периметром: " + pp.ToString() + " площадью: " + aa.ToString());
+                    lb.Items.Add( "Круг с радиусом " + r.ToString() + " периметром: " + pp + " площадью: " + aa);
                 }
             }
             if (rb2.IsChecked == true)
